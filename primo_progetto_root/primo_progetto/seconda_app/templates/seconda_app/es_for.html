@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=">
+    <title>Es for</title>
+</head>
+<body>
+        <p>
+            Cicla sequenza usando <b>forloop.counter</b> <br>
+            {% for x in list2 %}
+                <i>{{ forloop.counter }}</i> : {{ x }} <br>
+            {% endfor %}
+        </p>
+
+        <p>
+            Cicla sequenza usando <b>forloop.counter0</b> <br>
+            {% for x in list2 %}
+                <i>{{ forloop.counter0 }}</i> : {{ x }} <br>
+            {% endfor %}
+        </p>
+
+        <p>
+            Stampa il primo elemento con <b>forloop.first</b> <br>
+            {% for x in list2 %}
+                {% if forloop.first %}
+                <i>Primo elemento: </i> - {{ x }}
+                {% endif %}
+            {% endfor %}
+        </p>
+
+        <p>
+            Stampa il primo elemento con <b>forloop.last</b> <br>
+            {% for x in list2 %}
+                {% if forloop.last %}
+                <i>Ultimo elemento: </i> - {{ x }}
+                {% endif %}
+            {% endfor %}
+        </p>
+
+        <p>
+            Numero elementi rimanenti nella lista con <b>forloop.revcounter</b> 
+            e includendo quello corrente con <b>forloop.revcounter0</b><br>
+        {% for x in list2 %}
+                <i>Elementi da ciclare: </i> - {{ forloop.revcounter }} <br>
+                <i>Elementi da ciclare (da 0): </i> - {{ forloop.revcounter0 }} <br>
+                <i>Elemento: </i> - {{ x }} <br> <br>
+        {% endfor %}
+        </p>
+
+        <p>
+            Cicla sequenza al contrario con <b>reversed</b> <br>
+            {% for x in list2 reversed %}
+                <i>Elemento</i> : {{ x }} <br>
+            {% endfor %}
+        </p>
+
+        <h2>Contenuto dizionario: </h2>
+        <p>
+            Cicla chiavi e valori: <br>
+            {% for key, value in my_dict.items %}
+            <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </p>
+</body>
+</html>
