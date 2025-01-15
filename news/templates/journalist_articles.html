@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{%block title%}
+    Articoli
+{%endblock title%}
+
+{%block content%}
+<h1>Tutti gli articoli di {{ journalist.last_name }} {{ journalist.first_name }}:</h1>
+
+    {% for article in articles %}
+    <hr>
+    <div class="article">
+        <p><b>Titolo:</b> <a href="articoli/{{ article.id }}">{{ article.title }}</a></p>
+        <p><b>Contenuto:</b> {{ article.contents }}</p>
+    </div>
+    {% endfor %}
+{%endblock content%}

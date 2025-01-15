@@ -5,7 +5,7 @@ print(Journalist.objects.all())
 
 # insert into Journalists values ('Mario', 'Rossi')
 g1 = Journalist(first_name="Mario", last_name="Rossi")
-g1.save
+g1.save()
 
 # idem
 g2 = Journalist(first_name="Pinco", last_name="Pallino")

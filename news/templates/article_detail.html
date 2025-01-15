@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{%block title%}
+    {{ article.title }}
+{%endblock title%}
+
+{%block content%}
+    <h1>{{ article.title }}</h1>
+    <h3>{{ article.contents }}</h3>
+    <h5>Autore: <a href="lista_articoli/{{ article.journalist.id }}">{{ article.journalist }}</a></h5>
+{%endblock content%}
