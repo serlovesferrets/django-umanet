@@ -1,6 +1,7 @@
 local lspconfig = require("lspconfig")
 
 lspconfig.pyright.setup({})
+lspconfig.emmet_language_server.setup({})
 
 lspconfig.ruff.setup({
 	cmd = { "ruff", "server", "--preview" },
