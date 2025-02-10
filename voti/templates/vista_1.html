@@ -1,0 +1,15 @@
+{% extends "voti_base.html" %}
+
+{% block content %}
+
+{{block.super}}
+
+<hr>
+
+<ul>
+{% for subject in subjects %}
+    <li>{{subject}}</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

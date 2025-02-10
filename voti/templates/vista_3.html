@@ -1,0 +1,13 @@
+{% extends "voti_base.html" %}
+
+{% block content %}
+
+{{block.super}}
+
+<hr>
+
+{% for average in averages %}
+    <p>{{average.student}} ha di media {{average.average}}.</p>
+{% endfor %}
+
+{% endblock content %}

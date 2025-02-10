@@ -1,0 +1,20 @@
+{% extends "voti_base.html" %}
+
+{% block content %}
+
+{{block.super}}
+
+<hr>
+
+{% for student in students %}
+    <h3>{{student.name}}</h3>
+
+    <ul>
+    {% for subject in student.subject_data %}
+        <li>{{subject.name}}: voto {{subject.grade}}/10 con {{subject.leaves}} assenze</li>
+    {% endfor %}
+    </ul>
+
+{% endfor %}
+
+{% endblock content %}

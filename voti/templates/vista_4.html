@@ -1,0 +1,27 @@
+{% extends "voti_base.html" %}
+
+{% block content %}
+
+{{block.super}}
+
+<hr>
+
+<h3>Voto massimo</h3>
+
+<ul>
+    <li>Nome: {{max_grade_data.name}}</li>
+    <li>Materia: {{max_grade_data.subject}}</li>
+    <li>Voto: {{max_grade_data.grade}}</li>
+</ul>
+
+<hr>
+
+<h3>Voto minimo</h3>
+
+<ul>
+    <li>Nome: {{min_grade_data.name}}</li>
+    <li>Materia: {{min_grade_data.subject}}</li>
+    <li>Voto: {{min_grade_data.grade}}</li>
+</ul>
+
+{% endblock content %}
