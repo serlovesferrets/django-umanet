@@ -3,15 +3,7 @@ from django.http import HttpRequest
 from django.shortcuts import render
 from .models import Student, SubjectData
 
-type Subject = (
-    Literal["Matematica"]
-    | Literal["Italiano"]
-    | Literal["Inglese"]
-    | Literal["Storia"]
-    | Literal["Geografia"]
-)
-
-all_subjects: set[Subject] = {
+all_subjects = {
     "Matematica",
     "Italiano",
     "Inglese",
