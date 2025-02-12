@@ -1,0 +1,14 @@
+{% extends "corsi_base.html" %}
+
+{% block title %}{{block.super}} | Dati {% endblock title %}
+
+{% block content %}
+{{block.super}}
+
+<ul>
+    <li>Corso con più posti disponibili: {{most_seats.title}} ({{most_seats.available_seats}} posti)</li>
+    <li>Corso con meno posti disponibili: {{least_seats.title}} ({{least_seats.available_seats}} posti)</li>
+    <li>Posti totali: {{total_seats}}</li>
+</ul>
+
+{% endblock content %}

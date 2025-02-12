@@ -1,0 +1,14 @@
+{% extends "corsi_base.html" %}
+
+{% block title %}{{block.super}} | Lista corsi{% endblock title %}
+
+{% block content %}
+{{block.super}}
+
+<ul>
+{% for course in courses %}
+    <li>{{course}}</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

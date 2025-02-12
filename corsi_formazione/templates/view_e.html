@@ -1,0 +1,14 @@
+{% extends "corsi_base.html" %}
+
+{% block title %}{{block.super}} | Entro 30 Aprile {% endblock title %}
+
+{% block content %}
+{{block.super}}
+
+<ul>
+{% for course in courses %}
+<li> <a href="view_b_detail/{{course.id}}">{{course}}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

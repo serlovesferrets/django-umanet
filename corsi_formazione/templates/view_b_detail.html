@@ -1,0 +1,15 @@
+{% extends "corsi_base.html" %}
+
+{% block title %}{{block.super}} | Dettaglio corso {% endblock title %}
+
+{% block content %}
+{{block.super}}
+
+<h2>{{course.title}}</h2>
+
+<p>{{course.description}}</p>
+
+<p>Dal {{course.date_start}} al {{course.date_end}}</p>
+<p><i>Posti disponibili: {{course.available_seats}}</i></p>
+
+{% endblock content %}
