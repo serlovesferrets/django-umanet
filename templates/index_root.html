@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}
+Index
+{%endblock title %}
+
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,4 +18,4 @@
         <li><a href="{% url 'prima_app:index' %}">Index prima app</a></li>
     </ol>
 </body>
-</html>
+</html> {% endcomment %}

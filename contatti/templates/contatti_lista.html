@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{%block title%}
+{{block.super}} | Lista contatti
+{%endblock title%}
+
+{%block content%}
+<div class="container">
+    <h1>Lista dei contatti</h1>
+
+    
+    <p>
+    <table class="table">
+        <thead>
+            <tr>
+                {% if request.user.is_authenticated %}
+                <th>Cancella</th>
+                <th>Modifica</th>
+                {% endif %}
+                <th>Cognome</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Contenuti</th>
+            </tr>
+        </thead>
+    {% for contact in contacts %}
+        <tr>
+            {% if request.user.is_authenticated %}
+            <td><a href="{% url 'contatti:elimina-contatto' c.pk %}"><i class="fas fa-eraser"></i></a></td>
+            <td><a href="{% url 'contatti:modifica-contatto' c.pk %}"><i class="far fa-edit"></i></a></td>
+            {% endif %}
+            <td>{{contact.last_name}}</td>
+            <td>{{contact.first_name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.contents}}</td>
+        </tr>
+    {% endfor %}
+      </table>
+
+    </p>
+</div>
+{%endblock content%}

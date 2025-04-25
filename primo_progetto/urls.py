@@ -17,7 +17,6 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-import corsi_formazione
 from primo_progetto.views import index_root, chi_siamo
 
 urlpatterns = [
@@ -28,5 +27,10 @@ urlpatterns = [
     path("seconda_app/", include("seconda_app.urls")),
     path("news/", include("news.urls")),
     path("voti/", include("voti.urls")),
-    path("corsi_formazione/", include("corsi_formazione.urls"))
+    path("corsi_formazione/", include("corsi_formazione.urls")),
+    path("contatti/", include("contatti.urls"))
+]
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
